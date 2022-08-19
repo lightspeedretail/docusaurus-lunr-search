@@ -72,7 +72,7 @@ function getFilePaths(routesPaths, outDir, baseUrl, options = {}) {
             filePath = path.join(outDir, route, "index.html")
         } else {
             route = route.substr(baseUrl.length)
-            filePath = path.join(outDir, `${route}.html`)
+            filePath = path.join(outDir, `${route}/index.html`)
         }
         // In case docs only mode routesPaths has baseUrl twice
         if(addedFiles.has(filePath)) return
